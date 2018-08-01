@@ -7,6 +7,7 @@ app.use( express.static( 'server/public' ) );
 
 // globals
 const port = 5000;
+let stuff = [ 'meow', 'ribbet', 'woof', 'oink', 'moo', 'whinney', 'baaaaaah' ]
 
 // spin up server
 app.listen( port, ()=>{
@@ -16,5 +17,5 @@ app.listen( port, ()=>{
 // basic route for stuff
 app.get( '/stuff', ( req, res )=>{
     console.log( '/stuff GET hit' );
-    res.send( 'ribbet' );
+    res.send( stuff );
 }) // end /stuff GET 
